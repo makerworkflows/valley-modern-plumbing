@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  }
+  .card {
+    width: 1200px;
+    height: 630px;
+    background: linear-gradient(135deg, #091628 0%, #0f1f3d 40%, #1a315a 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 90px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(232,98,42,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #e8622a, #ff7a3d, #e8622a);
+  }
+  .eyebrow {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #e8622a;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 64px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+  .title span {
+    color: rgba(255,255,255,0.7);
+  }
+  .tagline {
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 400;
+  }
+  .bottom-bar {
+    position: absolute;
+    bottom: 30px;
+    left: 90px;
+    right: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .phone {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #e8622a;
+  }
+  .badges {
+    display: flex;
+    gap: 30px;
+  }
+  .badge {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+  }
+  .badge strong {
+    display: block;
+    font-size: 20px;
+    color: rgba(255,255,255,0.8);
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="card">
+  <div class="eyebrow">McAllen, TX &bull; Rio Grande Valley</div>
+  <div class="title">Valley Modern Plumbing <span>& Hardware</span></div>
+  <div class="tagline">Precision Work, Done Right the First Time. Since 1986.</div>
+  <div class="bottom-bar">
+    <div class="phone">(956) 686-3687</div>
+    <div class="badges">
+      <div class="badge"><strong>4.6&#9733;</strong>Google Rating</div>
+      <div class="badge"><strong>38+</strong>Years</div>
+      <div class="badge"><strong>200+</strong>Projects</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
