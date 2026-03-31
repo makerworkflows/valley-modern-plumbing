@@ -345,12 +345,12 @@ h6 {
 .nav {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .nav__list {
   display: flex;
-  gap: 2.5rem;
+  gap: 1.75rem;
 }
 
 .nav__link {
@@ -362,6 +362,7 @@ h6 {
   letter-spacing: 0.05em;
   position: relative;
   padding: 0.5rem 0;
+  white-space: nowrap;
 }
 
 .nav__link::after {
@@ -391,7 +392,13 @@ h6 {
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+.header__actions .btn {
+  white-space: nowrap;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
 }
 
 .contact-link {
@@ -461,7 +468,7 @@ h6 {
   display: flex;
   align-items: center;
   position: relative;
-  padding-top: calc(var(--header-height) + var(--banner-height, 0px));
+  padding-top: calc(var(--header-height) + var(--banner-height, 0px) + 2rem);
   overflow: hidden;
   background-color: var(--color-navy-dark);
 }
