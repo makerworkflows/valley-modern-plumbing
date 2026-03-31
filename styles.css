@@ -69,7 +69,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-height);
+  scroll-padding-top: var(--scroll-offset, var(--header-height));
 }
 
 body {
@@ -461,7 +461,7 @@ h6 {
   display: flex;
   align-items: center;
   position: relative;
-  padding-top: var(--header-height);
+  padding-top: calc(var(--header-height) + var(--banner-height, 0px));
   overflow: hidden;
   background-color: var(--color-navy-dark);
 }
@@ -1455,9 +1455,20 @@ textarea.form-control {
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 600;
-  position: relative;
-  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
   letter-spacing: 0.01em;
+}
+/* Push the fixed header below the emergency banner */
+.emergency-banner ~ .header {
+  top: var(--banner-height, 36px);
+}
+/* When banner is dismissed, header returns to top */
+.emergency-banner.hidden ~ .header {
+  top: 0;
 }
 .emergency-banner a {
   color: var(--color-gold);
@@ -1489,7 +1500,7 @@ textarea.form-control {
   background: var(--color-cream);
   border-top: 1px solid var(--color-cream-dark);
   border-bottom: 1px solid var(--color-cream-dark);
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 .trust-bar__grid {
   display: grid;

@@ -130,14 +130,31 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ── EMERGENCY BANNER DISMISS ── */
   const emergencyBanner = document.getElementById("emergencyBanner");
   const emergencyClose = document.getElementById("emergencyClose");
+
+  function syncBannerHeight() {
+    if (emergencyBanner && !emergencyBanner.classList.contains("hidden")) {
+      const h = emergencyBanner.offsetHeight;
+      document.documentElement.style.setProperty("--banner-height", h + "px");
+      document.documentElement.style.setProperty("--scroll-offset", (h + 80) + "px");
+    } else {
+      document.documentElement.style.setProperty("--banner-height", "0px");
+      document.documentElement.style.setProperty("--scroll-offset", "80px");
+    }
+  }
+
   if (emergencyBanner && emergencyClose) {
     if (sessionStorage.getItem("vmp-banner-dismissed")) {
       emergencyBanner.classList.add("hidden");
     }
+    syncBannerHeight();
+
     emergencyClose.addEventListener("click", () => {
       emergencyBanner.classList.add("hidden");
       sessionStorage.setItem("vmp-banner-dismissed", "1");
+      syncBannerHeight();
     });
+
+    window.addEventListener("resize", syncBannerHeight);
   }
 
   /* ── EN/ES LANGUAGE TOGGLE ── */
