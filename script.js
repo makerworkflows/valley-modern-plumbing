@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ── Navigation
     "nav-services": { en: "Services", es: "Servicios" },
     "nav-why": { en: "Why Us", es: "Quienes Somos" },
-    "nav-about": { en: "About", es: "Nosotros" },
+    "nav-about": { en: "About", es: "Nuestra Historia" },
     "nav-contact": { en: "Contact", es: "Contacto" },
     "nav-cta": { en: "Get a Free Estimate", es: "Cotizaci\u00f3n gratis" },
 
