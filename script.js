@@ -126,4 +126,69 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1000);
     });
   }
+
+  /* ── EMERGENCY BANNER DISMISS ── */
+  const emergencyBanner = document.getElementById("emergencyBanner");
+  const emergencyClose = document.getElementById("emergencyClose");
+  if (emergencyBanner && emergencyClose) {
+    if (sessionStorage.getItem("vmp-banner-dismissed")) {
+      emergencyBanner.classList.add("hidden");
+    }
+    emergencyClose.addEventListener("click", () => {
+      emergencyBanner.classList.add("hidden");
+      sessionStorage.setItem("vmp-banner-dismissed", "1");
+    });
+  }
+
+  /* ── EN/ES LANGUAGE TOGGLE ── */
+  const TRANSLATIONS = {
+    // Emergency banner
+    "emergency-text": { en: "Plumbing Emergency? We respond fast \u2014 ", es: "Emergencia de plomeria? Respondemos rapido \u2014 " },
+    "emergency-cta": { en: "Call (956) 686-3687 Now \u2192", es: "Llame al (956) 686-3687 Ahora \u2192" },
+    // Trust badges bar
+    "trust-family": { en: "Family-Owned", es: "Empresa Familiar" },
+    "trust-family-sub": { en: "Est. 1986 \u2014 McAllen, TX", es: "Desde 1986 \u2014 McAllen, TX" },
+    "trust-license-sub": { en: "Master Plumber License", es: "Licencia de Plomero Maestro" },
+    "trust-bz": { en: "Top 15% Texas", es: "Top 15% en Texas" },
+    "trust-bz-sub": { en: "BuildZoom Score: 99", es: "Puntuacion BuildZoom: 99" },
+    "trust-projects": { en: "200+ Projects", es: "200+ Proyectos" },
+    "trust-projects-sub": { en: "Permitted & Inspected", es: "Con Permiso e Inspeccion" },
+    "trust-bilingual": { en: "Hablamos Espanol", es: "Hablamos Espanol" },
+    "trust-bilingual-sub": { en: "Fully Bilingual Service", es: "Servicio Completamente Bilingue" },
+    // Mobile CTA
+    "cta-call": { en: "Call", es: "Llamar" },
+    "cta-text": { en: "Text", es: "Texto" },
+    "cta-quote": { en: "Quote", es: "Cotizar" },
+  };
+
+  let currentLang = localStorage.getItem("vmp-lang") || "en";
+
+  function setLang(lang) {
+    currentLang = lang;
+    localStorage.setItem("vmp-lang", lang);
+    document.documentElement.lang = lang;
+
+    // Update toggle buttons
+    document.querySelectorAll(".lang-toggle__btn").forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    // Swap translatable elements
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (TRANSLATIONS[key] && TRANSLATIONS[key][lang]) {
+        el.innerHTML = TRANSLATIONS[key][lang];
+      }
+    });
+  }
+
+  // Init language
+  const langToggle = document.getElementById("langToggle");
+  if (langToggle) {
+    langToggle.querySelectorAll(".lang-toggle__btn").forEach((btn) => {
+      btn.addEventListener("click", () => setLang(btn.dataset.lang));
+    });
+    // Apply saved language on load
+    if (currentLang !== "en") setLang(currentLang);
+  }
 });

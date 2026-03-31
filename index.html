@@ -101,8 +101,58 @@
         "priceRange": "$$"
       }
     </script>
+
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What areas does Valley Modern Plumbing serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve the entire Rio Grande Valley including McAllen, Pharr, Edinburg, Mission, San Juan, Hidalgo, Weslaco, Mercedes, Harlingen, and Brownsville."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Valley Modern Plumbing licensed and insured?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We hold Texas Master Plumber License #PM12745 and are fully insured. We rank in the top 15% of Texas contractors on BuildZoom with a score of 99."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer bilingual service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our team is fully bilingual in English and Spanish. Hablamos Espanol."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long has Valley Modern Plumbing been in business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Valley Modern Plumbing was founded in 1986 and has served the Rio Grande Valley for over 38 years across three generations of the Hernandez family."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
+    <!-- EMERGENCY BANNER -->
+    <div class="emergency-banner" id="emergencyBanner">
+      <span data-i18n="emergency-text">Plumbing Emergency? We respond fast &mdash; </span>
+      <a href="tel:9566863687" data-i18n="emergency-cta">Call (956) 686-3687 Now &rarr;</a>
+      <button class="emergency-banner__close" id="emergencyClose" aria-label="Dismiss banner">&times;</button>
+    </div>
+
     <!-- STICKY HEADER -->
     <header class="header" id="header" data-scrolled="false">
       <div class="container header__inner">
@@ -133,6 +183,12 @@
           </ul>
 
           <div class="header__actions">
+            <!-- EN/ES Language Toggle -->
+            <div class="lang-toggle" id="langToggle">
+              <button class="lang-toggle__btn active" data-lang="en">EN</button>
+              <button class="lang-toggle__btn" data-lang="es">ES</button>
+            </div>
+
             <a
               href="tel:9566863687"
               class="contact-link"
@@ -261,6 +317,47 @@
               >
               <span class="stat__label">Generation Family</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST BADGE BAR -->
+      <section class="trust-bar" aria-label="Trust credentials">
+        <div class="trust-bar__grid">
+          <div class="trust-bar__item reveal">
+            <div class="trust-bar__icon">
+              <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-5h2v5h6v-8h3L12 3z"/></svg>
+            </div>
+            <span class="trust-bar__title" data-i18n="trust-family">Family-Owned</span>
+            <span class="trust-bar__sub" data-i18n="trust-family-sub">Est. 1986 &mdash; McAllen, TX</span>
+          </div>
+          <div class="trust-bar__item reveal reveal-delay-1">
+            <div class="trust-bar__icon">
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            </div>
+            <span class="trust-bar__title">TX Lic. #PM12745</span>
+            <span class="trust-bar__sub" data-i18n="trust-license-sub">Master Plumber License</span>
+          </div>
+          <div class="trust-bar__item reveal reveal-delay-2">
+            <div class="trust-bar__icon">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <span class="trust-bar__title" data-i18n="trust-bz">Top 15% Texas</span>
+            <span class="trust-bar__sub" data-i18n="trust-bz-sub">BuildZoom Score: 99</span>
+          </div>
+          <div class="trust-bar__item reveal reveal-delay-3">
+            <div class="trust-bar__icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/></svg>
+            </div>
+            <span class="trust-bar__title" data-i18n="trust-projects">200+ Projects</span>
+            <span class="trust-bar__sub" data-i18n="trust-projects-sub">Permitted &amp; Inspected</span>
+          </div>
+          <div class="trust-bar__item reveal reveal-delay-4">
+            <div class="trust-bar__icon">
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zM5.08 16h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zM8.03 8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
+            </div>
+            <span class="trust-bar__title" data-i18n="trust-bilingual">Hablamos Espanol</span>
+            <span class="trust-bar__sub" data-i18n="trust-bilingual-sub">Fully Bilingual Service</span>
           </div>
         </div>
       </section>
@@ -1078,6 +1175,24 @@
         </div>
       </div>
     </footer>
+
+    <!-- MOBILE STICKY CTA BAR -->
+    <div class="mobile-cta" id="mobileCta">
+      <div class="mobile-cta__inner">
+        <a href="tel:9566863687" class="mobile-cta__btn mobile-cta__btn--call">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          <span data-i18n="cta-call">Call</span>
+        </a>
+        <a href="sms:9566863687" class="mobile-cta__btn mobile-cta__btn--text">
+          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+          <span data-i18n="cta-text">Text</span>
+        </a>
+        <a href="#contact" class="mobile-cta__btn mobile-cta__btn--quote">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/></svg>
+          <span data-i18n="cta-quote">Quote</span>
+        </a>
+      </div>
+    </div>
 
     <!-- JS -->
     <script type="module" src="/script.js"></script>
