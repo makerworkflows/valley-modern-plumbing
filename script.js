@@ -159,22 +159,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ── EN/ES LANGUAGE TOGGLE — Español mexicano ── */
   const TRANSLATIONS = {
-    // ── Emergency banner
-    "emergency-text": {
-      en: "Plumbing Emergency? We respond fast \u2014 ",
-      es: "\u00bfEmergencia de plomer\u00eda? Respondemos r\u00e1pido \u2014 "
-    },
-    "emergency-cta": {
-      en: "Call (956) 686-3687 Now \u2192",
-      es: "Llame al (956) 686-3687 ahora \u2192"
-    },
-
     // ── Navigation
     "nav-services": { en: "Services", es: "Servicios" },
     "nav-why": { en: "Why Us", es: "Quienes Somos" },
     "nav-about": { en: "About", es: "Nuestra Historia" },
     "nav-contact": { en: "Contact", es: "Contacto" },
-    "nav-cta": { en: "Get a Free Estimate", es: "Cotizaci\u00f3n gratis" },
+    "nav-cta": { en: "Get a Quote", es: "Cotizaci\u00f3n" },
 
     // ── Hero
     "hero-eyebrow": {
@@ -191,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     "hero-call": { en: "Call Now: (956) 686-3687", es: "Llame ahora: (956) 686-3687" },
     "hero-estimate": {
-      en: "Request a Free Estimate <span aria-hidden=\"true\">&rarr;</span>",
+      en: "Request a Quote <span aria-hidden=\"true\">&rarr;</span>",
       es: "Solicite una cotizaci\u00f3n gratis <span aria-hidden=\"true\">&rarr;</span>"
     },
 
@@ -312,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "contact-eyebrow": { en: "Get In Touch", es: "Cont\u00e1ctenos" },
     "contact-title": { en: "Let\u2019s Talk About Your Project", es: "Platiquemos sobre su proyecto" },
     "contact-subtitle": {
-      en: "Need a plumber you can trust? Give us a call or fill out the form for a free estimate.",
+      en: "Need a plumber you can trust? Give us a call or fill out the form to request a quote.",
       es: "\u00bfNecesita un plomero de confianza? Ll\u00e1menos o llene el formulario para una cotizaci\u00f3n gratis."
     },
     "info-phone": { en: "Phone", es: "Tel\u00e9fono" },
@@ -324,7 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     // ── Form
-    "form-title": { en: "Get a Free Estimate", es: "Cotizaci\u00f3n gratis" },
+    "form-title": { en: "Get a Quote", es: "Cotizaci\u00f3n" },
     "form-response": { en: "We\u2019ll get back to you within 1 business hour.", es: "Le respondemos en menos de 1 hora h\u00e1bil." },
     "form-first": { en: "First Name *", es: "Nombre *" },
     "form-last": { en: "Last Name *", es: "Apellido *" },
