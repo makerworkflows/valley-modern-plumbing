@@ -1684,8 +1684,40 @@ textarea.form-control {
 }
 .mobile-cta__btn--quote:hover { border-color: var(--color-gold); }
 
+/* WhatsApp floating button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+}
+
 @media (max-width: 768px) {
   .mobile-cta { display: block; }
   body { padding-bottom: 70px; }
   .footer { padding-bottom: 70px; }
+  .whatsapp-float {
+    bottom: 80px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+  .whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+  }
 }
