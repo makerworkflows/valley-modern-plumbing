@@ -1412,9 +1412,9 @@ textarea.form-control {
     display: flex;
   }
 
-  /* Lang toggle always visible in navbar on mobile */
+  /* Lang toggle always visible in navbar on mobile, between logo and burger */
   .lang-toggle {
-    order: -1;
+    margin-left: auto;
     margin-right: 0.75rem;
   }
 
