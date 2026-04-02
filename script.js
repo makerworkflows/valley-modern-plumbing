@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
       es: "El servicio de plomer\u00eda de <span class=\"text-gradient\">mayor confianza</span> en McAllen"
     },
     "hero-subtitle": {
-      en: "Honest work, fair prices, and a clean job site every time. Trusted by families across the Rio Grande Valley for over 38 years.",
+      en: "Honest work, fair prices, and a clean job site every time. Trusted by families across the Rio Grande Valley for over 70 years.",
       es: "Trabajo honesto, precios justos y un \u00e1rea de trabajo limpia siempre. M\u00e1s de 38 a\u00f1os ganando la confianza de las familias del Valle del R\u00edo Grande."
     },
     "hero-call": { en: "Call Now: (956) 686-3687", es: "Llame ahora: (956) 686-3687" },
@@ -189,8 +189,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "badge-rating": { en: "4.6 Google Rating", es: "4.6 en Google" },
     "badge-rating-sub": { en: "Verified Reviews", es: "Rese\u00f1as verificadas" },
     "badge-licensed": { en: "Licensed & Insured", es: "Licencia y seguro" },
-    "badge-years": { en: "38+ Years Experience", es: "38+ a\u00f1os de experiencia" },
-    "badge-since": { en: "Since 1986", es: "Desde 1986" },
+    "badge-years": { en: "70+ Years Experience", es: "70+ a\u00f1os de experiencia" },
+    "badge-since": { en: "Since 1952", es: "Desde 1952" },
 
     // ── Stats strip
     "stat-years": { en: "Years in Business", es: "A\u00f1os de servicio" },
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ── Trust badge bar
     "trust-family": { en: "Family-Owned", es: "Empresa familiar" },
-    "trust-family-sub": { en: "Est. 1986 \u2014 McAllen, TX", es: "Desde 1986 \u2014 McAllen, TX" },
+    "trust-family-sub": { en: "Est. 1952 \u2014 McAllen, TX", es: "Desde 1952 \u2014 McAllen, TX" },
     "trust-license-sub": { en: "Master Plumber License", es: "Licencia de plomero maestro" },
     "trust-bz": { en: "Top 15% Texas", es: "Top 15% en Texas" },
     "trust-bz-sub": { en: "BuildZoom Score: 99", es: "Puntuaci\u00f3n BuildZoom: 99" },
@@ -332,8 +332,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "foot-reach": { en: "Reach Us", es: "Cont\u00e1ctenos" },
     "foot-quote": { en: "\u201cWe treat your home like our own.\u201d", es: "\u201cTratamos su hogar como si fuera el nuestro.\u201d" },
     "foot-desc": {
-      en: "McAllen\u2019s most trusted plumbing service since 1986. Three generations of precision work and white-glove care.",
-      es: "El servicio de plomer\u00eda de mayor confianza en McAllen desde 1986. Tres generaciones de trabajo preciso y atenci\u00f3n de primera."
+      en: "McAllen\u2019s most trusted plumbing service since 1952. Three generations of precision work and white-glove care.",
+      es: "El servicio de plomer\u00eda de mayor confianza en McAllen desde 1952. Tres generaciones de trabajo preciso y atenci\u00f3n de primera."
     },
 
     // ── Mobile CTA
