@@ -70,6 +70,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: var(--scroll-offset, var(--header-height));
+  overflow-x: hidden;
 }
 
 body {
@@ -80,6 +81,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 img,
@@ -605,6 +607,7 @@ h6 {
     var(--color-orange-dark)
   );
   padding: 3rem 0;
+  margin-top: 2rem;
   position: relative;
   z-index: 10;
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
@@ -1347,9 +1350,13 @@ textarea.form-control {
 /* ── TABLET & MOBILE NAV BREAKPOINT (1024px) ── */
 @media (max-width: 1024px) {
   .hero {
-    padding-top: calc(var(--header-height) + 3rem);
+    padding-top: calc(var(--header-height) + 4.5rem);
   }
-  
+
+  .hero__eyebrow {
+    margin-top: 1rem;
+  }
+
   .nav {
     position: fixed;
     top: var(--header-height);
@@ -1371,6 +1378,14 @@ textarea.form-control {
 
   .nav.active {
     transform: translateX(0);
+  }
+
+  /* Hide logo when mobile nav is open */
+  .nav.active ~ .brand,
+  .header:has(.nav.active) .brand {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
   }
 
   .nav__list {
@@ -1395,6 +1410,12 @@ textarea.form-control {
 
   .mobile-toggle {
     display: flex;
+  }
+
+  /* Lang toggle always visible in navbar on mobile */
+  .lang-toggle {
+    order: -1;
+    margin-right: 0.75rem;
   }
 
   .hero__title {
