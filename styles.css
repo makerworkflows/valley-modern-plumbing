@@ -557,6 +557,7 @@ h6 {
   gap: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 2rem;
+  padding-bottom: 3rem;
 }
 
 .trust-badge {
@@ -607,7 +608,7 @@ h6 {
     var(--color-orange-dark)
   );
   padding: 3rem 0;
-  margin-top: 2rem;
+  margin-top: 0;
   position: relative;
   z-index: 10;
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
