@@ -1,4 +1,23 @@
 User-agent: *
 Allow: /
 
+# AI Search Crawlers -- explicitly allowed for GEO/AIO visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://valleymodernplumbing.com/sitemap.xml
