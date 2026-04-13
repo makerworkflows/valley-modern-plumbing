@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://valleymodernplumbing.com/sitemap.xml
