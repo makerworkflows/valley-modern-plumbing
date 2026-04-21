@@ -119,11 +119,36 @@ document.addEventListener("DOMContentLoaded", () => {
       submitBtn.innerHTML = "Sending...";
       submitBtn.disabled = true;
 
-      // Mock API delay (1.5 seconds)
-      setTimeout(() => {
-        formContent.style.display = "none";
-        formSuccess.classList.add("active");
-      }, 1000);
+      // Speed-to-Lead: POST to MWS Lead Intake Worker
+      const formData = {
+        client: "vmp",
+        first_name: contactForm.querySelector('[name="first_name"]')?.value || "",
+        last_name: contactForm.querySelector('[name="last_name"]')?.value || "",
+        phone: contactForm.querySelector('[name="phone"]')?.value || "",
+        email: contactForm.querySelector('[name="email"]')?.value || "",
+        service_type: contactForm.querySelector('[name="service_type"]')?.value || "",
+        message: contactForm.querySelector('[name="message"]')?.value || "",
+      };
+
+      fetch("https://mws-lead-intake.makerworkflows.workers.dev/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+        .then((res) => res.json())
+        .then(() => {
+          formContent.style.display = "none";
+          formSuccess.classList.add("active");
+        })
+        .catch(() => {
+          // Fallback: still show success to user
+          formContent.style.display = "none";
+          formSuccess.classList.add("active");
+        })
+        .finally(() => {
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        });
     });
   }
 
